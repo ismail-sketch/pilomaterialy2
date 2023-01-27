@@ -103,6 +103,12 @@ main {
     margin: 0 auto;
     padding: 0 15px;
 }
+.title {
+    font-size: 40px;
+    font-weight: bold;
+    @include adaptiveAllCont('font-size', 40, 20, 1310, 320);
+}
+
 
 .header {
     height: 70px;
@@ -366,7 +372,7 @@ main {
 .main {
     width: 100%;
     min-height: 100vh;
-    background-image: url(../img/main_bg.jpg);
+    background-image: url(../img/main_bg2.jpg);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -437,3 +443,73 @@ main {
         }
     }
 }
+
+/*WEDO SECTION================================*/
+.wedo {
+    padding-top: 100px;
+    padding-bottom: 50px;
+    @include adaptiveAllCont('padding-top', 100, 50, 1310, 320);
+
+    &__cont-wrp {
+        display: flex;
+        justify-content: center;
+        @media (max-width: 990px) {
+            flex-wrap: wrap;
+            row-gap: 20px;
+            column-gap: 20px;
+        }
+        @media (max-width: 525px) {
+            flex-direction: column;
+        }
+    }
+    &__cont-item {
+        position: relative;
+        padding: 0 10px;
+        flex: 0 1 25%;
+        &:not(:last-child) {
+            border-right: 1px solid #A7A7A7;
+            @media (max-width: 990px) {
+                border-right: none;
+            }
+        }
+        img {
+            display: block;
+            margin: 0 auto;
+            @include adaptiveAllCont('width', 100, 60, 1310, 320);
+        }
+        @media (max-width: 990px) {
+            flex: 0 1 45%;
+            box-shadow: -1px 3px 13px -5px rgba(131, 131, 131, 0.5);
+            padding-top: 15px;
+            padding-bottom: 15px;
+        }
+    }
+    &__item-title {
+        font-size: 18px;
+        font-weight: 700;
+        text-align: center;
+        margin-top: 20px;
+        @include adaptiveAllCont('margin-top', 20, 5, 1310, 320);
+        color: $colorBlack2;
+        line-height: 1.2;
+        @media (max-width: 1050px) {
+            font-size: 16px;
+        }
+    }
+    &__item-text {
+        margin-top: 15px;
+        @include adaptiveAllCont('margin-top', 15, 5, 1310, 320);
+        text-align: center;
+        line-height: 1.2;
+        font-size: 18px;
+        font-weight: 500;
+        color: $colorBlack2;
+        @media (max-width: 1050px) {
+            font-size: 16px;
+            br {
+                display: none;
+            }
+        }
+    }
+}
+
