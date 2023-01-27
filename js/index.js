@@ -21,3 +21,18 @@ window.addEventListener('click', (e) => {
     }
 })
 
+// Перемещение контактов их хедера в бургер-меню===========================
+const headerContacts = document.querySelector('.header__contacts');
+const headerContainer = document.querySelector('.header-container');
+const menuList2 = document.querySelector('.menu__list');
+
+function moveContacts() {
+    if(window.innerWidth <= 510) {
+        menuList2.insertAdjacentElement('beforeend', headerContacts);
+    } else {
+        headerContainer.insertAdjacentElement('beforeend', headerContacts);
+    }
+}
+moveContacts();
+
+window.addEventListener('resize', moveContacts);
