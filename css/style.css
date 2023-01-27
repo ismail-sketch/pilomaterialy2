@@ -265,7 +265,7 @@ main {
 
 @media (max-width: 915px) {
   .header__contacts {
-    margin-right: 50px;
+    text-align: center;
   }
 }
 
@@ -359,10 +359,11 @@ main {
     top: 0;
     z-index: 3;
     width: 400px;
-    padding: 20px 15px 20px 15px;
+    padding: 50px 15px 20px 15px;
     -webkit-transform: translateX(100%);
     transform: translateX(100%);
     height: 100vh;
+    background-color: #fff;
   }
   .menu.active {
     -webkit-transform: translateX(0);
@@ -444,6 +445,12 @@ main {
   .menu__item:hover::after {
     -webkit-transform: scale(1);
             transform: scale(1);
+  }
+}
+
+@media (max-width: 915px) {
+  .menu__item {
+    text-align: center;
   }
 }
 
