@@ -903,6 +903,12 @@ main {
   text-align: center;
   padding: 0 10px;
   padding-bottom: 30px;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+}
+
+.samples__card-item a:hover {
+  color: #c09448;
 }
 
 /*SECTION DELIVERY=============================*/
